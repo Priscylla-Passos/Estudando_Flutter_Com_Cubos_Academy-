@@ -20,6 +20,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       //TOPICO 2 Cor de Fundo
       // home: Card(
       //   color: Colors.pinkAccent,
@@ -32,13 +33,15 @@ class App extends StatelessWidget {
       //TOPICO 5 - Fundo Gradiente
 
       home: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+            //begin: Alignment.topLeft,
+            begin: Alignment.bottomRight,
+            // end: Alignment.bottomRight,
+            end: Alignment.topLeft,
             colors: [
-              Colors.blue.shade400,
-              Colors.purple.shade600,
+              Colors.blueAccent,
+              Colors.purpleAccent,
             ],
           ),
         ),
