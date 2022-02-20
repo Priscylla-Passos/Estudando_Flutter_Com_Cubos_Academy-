@@ -8,19 +8,18 @@ class Coin extends StatefulWidget {
 }
 
 class _CoinState extends State<Coin> {
-  int cobre = 0;
-  int prata = 0;
-  int ouro = 0;
+  int cobre = 0, prata = 0, ouro = 0;
 
   void moedas() {
     setState(() {
       cobre++;
 
       if (cobre == 10) {
-        prata = prata + 1;
+        prata += 1;
+
         cobre = 0;
       } else if (prata == 10) {
-        ouro = ouro + 1;
+        ouro += 1;
         prata = 0;
       }
     });
@@ -29,6 +28,8 @@ class _CoinState extends State<Coin> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      
       home: Container(
         color: Colors.cyanAccent,
         child: GestureDetector(
