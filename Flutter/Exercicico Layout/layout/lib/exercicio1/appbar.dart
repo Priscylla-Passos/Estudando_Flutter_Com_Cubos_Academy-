@@ -5,19 +5,23 @@ class MeuAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.amber.shade200,
-          title: Text(
+          title: const Text(
             'Coffee',
             style: TextStyle(
               color: Colors.brown,
-               fontSize:  28,
-               ),
-               ),
-               leading: Icon(Icons.coffee, size: 36, color: Colors.brown,),
+              fontSize: 28,
+            ),
+          ),
+          leading: const Icon(
+            Icons.coffee,
+            size: 36,
+            color: Colors.brown,
+          ),
         ),
       ),
     );
